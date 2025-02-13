@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  background-color: var(--grey100);
+  background-color: white;
 }
 
 main {
@@ -115,7 +115,7 @@ main {
 }
 
 .neutral-background {
-  color: var(--grey200);
+  color: white;
 }
 
 .dark-background {
