@@ -1,0 +1,176 @@
+:root {
+  --purple50: hsl(260, 100%, 95%);
+  --purple300: hsl(264, 82%, 80%);
+  --purple500: hsl(263, 55%, 52%);
+
+  --grey100: hsl(214, 17%, 92%);
+  --grey200: hsl(0, 0%, 81%);
+  --grey400: hsl(224, 10%, 45%);
+  --grey500: hsl(217, 19%, 35%);
+
+  --darkBlue: hsl(219, 29%, 14%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--grey100);
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 7.5%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 3rem;
+  column-gap: 3rem;
+}
+
+.card {
+  background-color: bisque;
+
+  border-radius: 10px;
+  padding: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.card-grid .column-2 {
+  grid-column: span 1;
+}
+
+.card-grid .row-2 {
+  grid-row: span 2;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.profile-info > img {
+  margin-right: 16px;
+  border-radius: 200px;
+
+  width: 40px;
+}
+
+.profile-info > img.purple-border {
+  border: solid var(--purple300);
+}
+.profile-info > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info > div > span {
+  margin-bottom: 4px;
+}
+
+.profile-info .profile-subtitle {
+  font-size: 11px;
+}
+
+.testimonial-summary {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.light-background {
+  color: var(--grey500);
+}
+
+.neutral-background {
+  color: var(--grey200);
+}
+
+.dark-background {
+  color: white;
+}
+
+#card1 {
+  background-color: var(--purple500);
+}
+
+#card2 {
+  background-color: var(--grey500);
+}
+
+#card3 {
+  background-color: white;
+}
+
+#card4 {
+  background-color: var(--darkBlue);
+}
+
+#card5 {
+  background-color: white;
+}
+
+@media (min-width: 992px) {
+  main {
+    padding: 0 12.5%;
+  }
+
+  .card {
+    box-shadow: 30px 50px 50px hsl(224, 10%, 45%, 35%);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto;
+  }
+
+  .card-grid .column-2 {
+    grid-column: span 2;
+  }
+
+  #card1,
+  #card2 {
+    order: 0;
+  }
+
+  #card3,
+  #card4 {
+    order: 2;
+  }
+
+  #card5 {
+    order: 1;
+  }
+}
