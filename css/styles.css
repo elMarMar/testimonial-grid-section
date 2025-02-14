@@ -48,7 +48,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  padding: 4rem 7.5%;
+  padding: 10vh 7.5%;
 }
 
 .card-grid {
@@ -139,6 +139,7 @@ main {
 
 #card4 {
   background-color: var(--darkBlue);
+  color: var(--grey200);
 }
 
 #card5 {
